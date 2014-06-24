@@ -1,0 +1,5 @@
+1	ARTICLE	a
+2	VERB	bibi
+3	NOUN	cc
+4	ARTICLE	the
+5	NOUN	book

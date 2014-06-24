@@ -1,0 +1,33 @@
+#! /bin/bash
+#Creae the parser tree
+i=$1;
+Line=`sed -n $i'p' ./Input.txt `;
+NounPhrase=`sed -n $i'p' ./Input.txt | cut -d ' ' -f -2`;
+VerbPhrase=`sed -n $i'p' ./Input.txt | cut -d ' ' -f 3-`;
+Verb=`sed -n $i'p' ./Input.txt | cut -d ' ' -f 3`;
+NounPhrase2=`sed -n $i'p' ./Input.txt | cut -d ' ' -f 4,5`;
+Noun1=`sed -n $i'p' ./Input.txt | cut -d ' ' -f 2`;
+Noun2=`sed -n $i'p' ./Input.txt | cut -d ' ' -f 5`;
+Article1=`sed -n $i'p' ./Input.txt | cut -d ' ' -f 1`;
+Article2=`sed -n $i'p' ./Input.txt | cut -d ' ' -f 4`;
+echo "1---"$Line >> ./Result/$i/Tree.txt;
+echo $'\t'"2------"$NounPhrase >> ./Result/$i/Tree.txt;
+echo $'\t'$'\t'"2-1---------"$Article1 >> ./Result/$i/Tree.txt;
+echo $'\t'$'\t'"2-2---------"$Noun1 >> ./Result/$i/Tree.txt;
+echo $'\t'"3------"$VerbPhrase >> ./Result/$i/Tree.txt;
+echo $'\t'$'\t'"3-1---------"$Verb >> ./Result/$i/Tree.txt;
+echo $'\t'$'\t'"3-2---------"$NounPhrase2 >> ./Result/$i/Tree.txt;
+echo $'\t'$'\t'$'\t'"3-2-1--------"$Article2 >> ./Result/$i/Tree.txt;
+echo $'\t'$'\t'$'\t'"3-2-2--------"$Noun2 >> ./Result/$i/Tree.txt;
+echo "================================================================" >> ./Result/$i/Tree.txt;
+echo "================================================================" >> ./Result/$i/Tree.txt;
+echo "1---Sentece" >> ./Result/$i/Tree.txt;
+echo $'\t'"2------NounPhrase" >> ./Result/$i/Tree.txt;
+echo $'\t'$'\t'"2-1---------Article" >> ./Result/$i/Tree.txt;
+echo $'\t'$'\t'"2-2---------Noun" >> ./Result/$i/Tree.txt;
+echo $'\t'"3------VerbPhrase" >> ./Result/$i/Tree.txt;
+echo $'\t'$'\t'"3-1---------Verb" >> ./Result/$i/Tree.txt;
+echo $'\t'$'\t'"3-2---------NounPhrase" >> ./Result/$i/Tree.txt;
+echo $'\t'$'\t'$'\t'"3-2-1--------Article" >> ./Result/$i/Tree.txt;
+echo $'\t'$'\t'$'\t'"3-2-2--------Noun" >> ./Result/$i/Tree.txt;
+exit 0;

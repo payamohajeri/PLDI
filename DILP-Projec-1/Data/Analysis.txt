@@ -1,0 +1,10 @@
+Token	Lexeme
+ARTICLE	a
+ARTICLE	the
+NOUN	girl
+NOUN	dog
+VERB	sees
+VERB	eats
+VERB	bibi
+NOUN	cc
+NOUN	book

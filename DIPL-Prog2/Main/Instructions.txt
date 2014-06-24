@@ -1,0 +1,6 @@
+int	x	20
+int	xx	100
+int	yy	123
+int	zz	567
+string	y	DIPL
+bool	z	1

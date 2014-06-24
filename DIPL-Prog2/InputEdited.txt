@@ -1,0 +1,32 @@
+function A ( <->a, ->b, <-c, <-d )
+Begin
+a=14
+b=18
+c=7
+d=3456
+End
+function B ( <->a, ->b, <-c, &d )
+Begin
+a=D
+b=I
+c=L
+d=P
+End
+function C ( <->a, ->b, <-c )
+Begin
+a=14
+b=18
+c=7
+End
+main ()
+Begin
+int x=20
+int xx=100
+int yy=123
+int zz=567
+string y=DIPL
+bool z=1
+call	A ( x, xx, yy, zz )
+call	B ( y, y, y, y )
+call	C ( z, x, xx )
+End
